@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/presentation/home_page/cubit/home_page_cubit.dart';
 import 'package:untitled/presentation/widgets/custom_scaffold_widget.dart';
-import 'package:untitled/presentation/overview_page/overview_page.dart';
+import 'package:untitled/presentation/overview/overview_page.dart';
 import 'package:untitled/presentation/page/test_page.dart';
 
 class HomePage extends StatefulWidget {
