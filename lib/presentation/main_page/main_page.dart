@@ -5,6 +5,7 @@ import 'package:untitled/model/menu_item.dart';
 import 'package:untitled/presentation/home_page/home_page.dart';
 import 'package:untitled/presentation/menu_page/menu_page.dart';
 import 'package:untitled/presentation/page/test_page.dart';
+import 'package:untitled/utils/menu_constant.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  MenuModel currentItem = MenuItems.payment;
+  MenuModel currentItem = MenuItems.overview;
 
   @override
   Widget build(BuildContext context) {
@@ -43,18 +44,8 @@ class _MainPageState extends State<MainPage> {
 
   Widget getScreen() {
     switch (currentItem) {
-      case MenuItems.payment:
+      case MenuItems.overview:
         return const HomePage();
-      case MenuItems.promos:
-        return const PromoPage();
-      case MenuItems.notifications:
-        return const NotificationPage();
-      case MenuItems.help:
-        return const HelpPage();
-      case MenuItems.aboutUs:
-        return const AboutPage();
-      case MenuItems.rateUs:
-        return const RateUsPage();
       case MenuItems.settings:
         return const SettingsPage();
       default:
