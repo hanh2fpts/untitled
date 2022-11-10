@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:untitled/model/menu_item.dart';
+import 'package:untitled/presentation/home_page/cubit/home_page_cubit.dart';
 import 'package:untitled/presentation/home_page/home_page.dart';
 import 'package:untitled/presentation/menu_page/menu_page.dart';
 import 'package:untitled/presentation/page/test_page.dart';
@@ -45,7 +47,10 @@ class _MainPageState extends State<MainPage> {
   Widget getScreen() {
     switch (currentItem) {
       case MenuItems.overview:
-        return const HomePage();
+        return BlocProvider(
+          create: (context) => HomePageCubit(),
+          child: const HomePage(),
+        );
       case MenuItems.settings:
         return const SettingsPage();
       default:

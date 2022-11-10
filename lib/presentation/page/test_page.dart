@@ -1,7 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/l10n/multi_languages.dart';
-import 'package:untitled/presentation/menu_widget.dart';
+import 'package:untitled/presentation/widgets/custom_scaffold_widget.dart';
 import 'package:untitled/utils/app_constant.dart';
+
+class AssetPage extends StatelessWidget {
+  const AssetPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.amber,
+    );
+  }
+}
+
+class OrderPage extends StatelessWidget {
+  const OrderPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.green,
+    );
+  }
+}
+
+class ModifierPage extends StatelessWidget {
+  const ModifierPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.red,
+    );
+  }
+}
+
+class TransferPage extends StatelessWidget {
+  const TransferPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.yellow,
+    );
+  }
+}
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -10,10 +54,8 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     MultiLanguages multiLanguages = MultiLanguages();
     return Scaffold(
-        appBar: AppBar(
-            leading: const MenuWidget(),
-            backgroundColor: Colors.cyan,
-            title: const Text('Settings Page')),
+        appBar:
+            CustomScaffoldWidget(titlePage: 'SettingPage', context: context),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
