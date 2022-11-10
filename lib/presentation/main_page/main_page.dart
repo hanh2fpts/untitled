@@ -17,7 +17,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  MenuModel currentItem = MenuItems.overview;
+  MenuModel currentItem = MenuItems.overView;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class _MainPageState extends State<MainPage> {
         menuBackgroundColor: Colors.indigo,
         borderRadius: 40,
         angle: 0,
-        slideWidth: MediaQuery.of(context).size.width * 0.65,
+        slideWidth: MediaQuery.of(context).size.width * 0.75,
         showShadow: true,
         mainScreenTapClose: true,
         style: DrawerStyle.defaultStyle,
@@ -46,7 +46,7 @@ class _MainPageState extends State<MainPage> {
 
   Widget getScreen() {
     switch (currentItem) {
-      case MenuItems.overview:
+      case MenuItems.overView:
         return BlocProvider(
           create: (context) => HomePageCubit(),
           child: const HomePage(),

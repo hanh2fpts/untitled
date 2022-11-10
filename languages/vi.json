@@ -1,3 +1,7 @@
 {
-  "testStr": "Một gói Flutter triển khai ConvexAppBar để hiển thị một tab lồi ở thanh dưới cùng. Chủ đề được hỗ trợ."
+  "marketPage": "Thị trường",
+  "assetPage": "Tài sản",
+  "orderPage": "Đặt lệnh",
+  "modifyPage": "Hủy/Sửa",
+  "transferPage": "Chuyển tiền"
 }

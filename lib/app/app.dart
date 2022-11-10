@@ -66,6 +66,7 @@ class _MyAppState extends State<MyApp> {
       },
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'Arial',
         primarySwatch: Colors.green,
       ),
       home: const MainPage(),

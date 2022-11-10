@@ -8,8 +8,13 @@ class AssetPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber,
+    return Scaffold(
+      appBar: CustomScaffoldWidget(
+          titlePage: MultiLanguages.of(context)!.translate('assetPage'),
+          context: context),
+      body: Container(
+        color: Colors.amber,
+      ),
     );
   }
 }
@@ -19,8 +24,13 @@ class OrderPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.green,
+    return Scaffold(
+      appBar: CustomScaffoldWidget(
+          titlePage: MultiLanguages.of(context)!.translate('orderPage'),
+          context: context),
+      body: Container(
+        color: Colors.green,
+      ),
     );
   }
 }
@@ -30,8 +40,13 @@ class ModifierPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
+    return Scaffold(
+      appBar: CustomScaffoldWidget(
+          titlePage: MultiLanguages.of(context)!.translate('modifyPage'),
+          context: context),
+      body: Container(
+        color: Colors.red,
+      ),
     );
   }
 }
@@ -41,8 +56,13 @@ class TransferPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.yellow,
+    return Scaffold(
+      appBar: CustomScaffoldWidget(
+          titlePage: MultiLanguages.of(context)!.translate('transferPage'),
+          context: context),
+      body: Container(
+        color: Colors.yellow,
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:untitled/l10n/multi_languages.dart';
 import 'package:untitled/presentation/home_page/cubit/home_page_cubit.dart';
 import 'package:untitled/presentation/widgets/custom_scaffold_widget.dart';
 import 'package:untitled/presentation/overview/overview_page.dart';
@@ -20,12 +21,7 @@ class _HomePageState extends State<HomePage> {
     return BlocBuilder<HomePageCubit, HomePageState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: CustomScaffoldWidget(
-            titlePage: state.titlePage,
-            context: context,
-          ),
-          body: SafeArea(
-              child: IndexedStack(
+          body: IndexedStack(
             index: state.index,
             children: const [
               OverViewPage(),
@@ -34,7 +30,7 @@ class _HomePageState extends State<HomePage> {
               ModifierPage(),
               TransferPage()
             ],
-          )),
+          ),
           bottomNavigationBar: ConvexAppBar(
             onTap: (index) {
               context.read<HomePageCubit>().selectPage(index);
@@ -44,14 +40,22 @@ class _HomePageState extends State<HomePage> {
             activeColor: Colors.blue,
             color: Colors.grey,
             height: 50,
-            items: const [
-              TabItem(icon: FontAwesomeIcons.chartLine, title: 'Thị trường'),
-              TabItem(icon: FontAwesomeIcons.fileContract, title: 'Tài sản'),
-              TabItem(icon: FontAwesomeIcons.gavel, title: 'Đặt lệnh'),
-              TabItem(icon: FontAwesomeIcons.fileSignature, title: 'Hủy/Sửa'),
+            items: [
+              TabItem(
+                  icon: FontAwesomeIcons.chartLine,
+                  title: MultiLanguages.of(context)!.translate('marketPage')),
+              TabItem(
+                  icon: FontAwesomeIcons.fileContract,
+                  title: MultiLanguages.of(context)!.translate('assetPage')),
+              TabItem(
+                  icon: FontAwesomeIcons.gavel,
+                  title: MultiLanguages.of(context)!.translate('orderPage')),
+              TabItem(
+                  icon: FontAwesomeIcons.fileSignature,
+                  title: MultiLanguages.of(context)!.translate('modifyPage')),
               TabItem(
                   icon: FontAwesomeIcons.moneyCheckDollar,
-                  title: 'Chuyển tiền'),
+                  title: MultiLanguages.of(context)!.translate('transferPage')),
             ],
           ),
         );

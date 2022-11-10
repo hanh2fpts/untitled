@@ -3,16 +3,15 @@ part of 'home_page_cubit.dart';
 @immutable
 abstract class HomePageState extends Equatable {
   final int index;
-  final String titlePage;
-  const HomePageState({required this.index, required this.titlePage});
+  const HomePageState({required this.index});
   @override
-  List<Object?> get props => [index, titlePage];
+  List<Object?> get props => [index];
 }
 
 class HomePageInitial extends HomePageState {
-  const HomePageInitial({required super.index, required super.titlePage});
+  const HomePageInitial({required super.index});
 }
 
 class HomePageSelected extends HomePageState {
-  const HomePageSelected({required super.index, required super.titlePage});
+  const HomePageSelected({required super.index});
 }
