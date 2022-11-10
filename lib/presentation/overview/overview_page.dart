@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/l10n/multi_languages.dart';
 import 'package:untitled/presentation/widgets/custom_scaffold_widget.dart';
 
 class OverViewPage extends StatelessWidget {

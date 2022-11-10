@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:untitled/l10n/multi_languages.dart';
+import 'package:untitled/l10n/app_localizations.dart';
 import 'package:untitled/presentation/main_page/main_page.dart';
 import 'package:untitled/utils/app_constant.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
         Locale(AppConstant.languageCodeVI, AppConstant.countryCodeVI),
       ],
       localizationsDelegates: const [
-        MultiLanguages.delegate,
+        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate

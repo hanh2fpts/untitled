@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/l10n/multi_languages.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:untitled/l10n/app_localizations.dart';
 import 'package:untitled/presentation/widgets/custom_scaffold_widget.dart';
 import 'package:untitled/utils/app_constant.dart';
 
@@ -10,8 +11,7 @@ class AssetPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomScaffoldWidget(
-          titlePage: MultiLanguages.of(context)!.translate('assetPage'),
-          context: context),
+          titlePage: AppLocalizations.of(context)!.assetPage, context: context),
       body: Container(
         color: Colors.amber,
       ),
@@ -26,8 +26,7 @@ class OrderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomScaffoldWidget(
-          titlePage: MultiLanguages.of(context)!.translate('orderPage'),
-          context: context),
+          titlePage: AppLocalizations.of(context)!.orderPage, context: context),
       body: Container(
         color: Colors.green,
       ),
@@ -42,7 +41,7 @@ class ModifierPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomScaffoldWidget(
-          titlePage: MultiLanguages.of(context)!.translate('modifyPage'),
+          titlePage: AppLocalizations.of(context)!.modifyPage,
           context: context),
       body: Container(
         color: Colors.red,
@@ -58,7 +57,7 @@ class TransferPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomScaffoldWidget(
-          titlePage: MultiLanguages.of(context)!.translate('transferPage'),
+          titlePage: AppLocalizations.of(context)!.transferPage,
           context: context),
       body: Container(
         color: Colors.yellow,
@@ -100,7 +99,7 @@ class SettingsPage extends StatelessWidget {
                   size: 50,
                 ),
               ),
-              Text(MultiLanguages.of(context)!.locale.toString()),
+              Text(Localizations.localeOf(context).toString()),
             ],
           ),
         ));

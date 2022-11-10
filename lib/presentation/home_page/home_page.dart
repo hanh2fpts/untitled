@@ -2,9 +2,8 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:untitled/l10n/multi_languages.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:untitled/presentation/home_page/cubit/home_page_cubit.dart';
-import 'package:untitled/presentation/widgets/custom_scaffold_widget.dart';
 import 'package:untitled/presentation/overview/overview_page.dart';
 import 'package:untitled/presentation/page/test_page.dart';
 
@@ -43,19 +42,19 @@ class _HomePageState extends State<HomePage> {
             items: [
               TabItem(
                   icon: FontAwesomeIcons.chartLine,
-                  title: MultiLanguages.of(context)!.translate('marketPage')),
+                  title: AppLocalizations.of(context)!.marketPage),
               TabItem(
                   icon: FontAwesomeIcons.fileContract,
-                  title: MultiLanguages.of(context)!.translate('assetPage')),
+                  title: AppLocalizations.of(context)!.assetPage),
               TabItem(
                   icon: FontAwesomeIcons.gavel,
-                  title: MultiLanguages.of(context)!.translate('orderPage')),
+                  title: AppLocalizations.of(context)!.orderPage),
               TabItem(
                   icon: FontAwesomeIcons.fileSignature,
-                  title: MultiLanguages.of(context)!.translate('modifyPage')),
+                  title: AppLocalizations.of(context)!.modifyPage),
               TabItem(
                   icon: FontAwesomeIcons.moneyCheckDollar,
-                  title: MultiLanguages.of(context)!.translate('transferPage')),
+                  title: AppLocalizations.of(context)!.transferPage),
             ],
           ),
         );

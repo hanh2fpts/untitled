@@ -1,9 +1,6 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:untitled/app/app.dart';
-import 'package:untitled/l10n/multi_languages_delegate.dart';
 import 'package:untitled/utils/app_constant.dart';
 
 class MultiLanguages {
@@ -11,7 +8,7 @@ class MultiLanguages {
 
   MultiLanguages(
       {this.locale =
-      const Locale.fromSubtags(languageCode: AppConstant.countryCodeEN)});
+          const Locale.fromSubtags(languageCode: AppConstant.countryCodeEN)});
 
   static MultiLanguages? of(BuildContext context) {
     return Localizations.of<MultiLanguages>(context, MultiLanguages);
@@ -32,23 +29,5 @@ class MultiLanguages {
   void setLocale(BuildContext context, Locale locale) async {
     keepLocalKey(locale.languageCode);
     MyApp.setLocale(context, locale);
-  }
-
-  static const LocalizationsDelegate<MultiLanguages> delegate =
-  AppLanguagesDelegate();
-  late Map<String, String> _localizedStrings;
-  Future<bool> load() async {
-    String jsonString = await rootBundle
-        .loadString('languages/${locale.languageCode}.json');
-    Map<String, dynamic> jsonMap = json.decode(jsonString);
-
-    _localizedStrings = jsonMap.map((key, value) {
-      return MapEntry(key, value.toString());
-    });
-    return true;
-  }
-
-  String translate(String key) {
-    return _localizedStrings[key]!;
   }
 }
